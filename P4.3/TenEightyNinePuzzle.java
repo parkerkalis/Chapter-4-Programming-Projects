@@ -1,26 +1,12 @@
-
-import java.util.Scanner;
-
-/**
- * Read a number from the user. Discard all but the last three digits.
- * Reverse the digits, subtract the original from the reversed (discarding any
- * minus sign), reverse the digits of the difference, and add the difference and
- * the reversed difference. For example: Input: 371 Reversed: 173 Difference:
- * 198 Reversed: 891 Sum: 1089
- *
- */
-public class TenEightyNinePuzzle.java
+public class TenEightNinePuzzle
 {
-
-    /**
-     * Reverse the last 3 digits of number
-     *
-     * @param n the number
-     * @return the reverse of the last 3 digits of n
-     */
     static int reverse(int n)
     {
-
+    	int num1 = n / 100;
+    	int num2 = (n % 100) / 10;
+    	int num3 = n % 10;
+    	int num4 = 100 * num3 + 10 * num2 + num1; 
+    	return num4;
     }
 
     /**
@@ -28,7 +14,12 @@ public class TenEightyNinePuzzle.java
      */
     public static void main(String[] args)
     {
-      
+      TenEightNinePuzzle number = new TenEightNinePuzzle();
+      System.out.println("Input: " + "371");
+      System.out.println("Reversed: " + TenEightNinePuzzle.reverse(371));
+      System.out.println("Difference: " + (371 - TenEightNinePuzzle.reverse(371)));
+      System.out.println("Reversed: " + TenEightNinePuzzle.reverse(371 - TenEightNinePuzzle.reverse(371)));
+      System.out.println("Sum: " + ((371 - TenEightNinePuzzle.reverse(371)) + TenEightNinePuzzle.reverse(371 - TenEightNinePuzzle.reverse(371))));
     }
 }
 
