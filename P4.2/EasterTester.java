@@ -1,11 +1,8 @@
-/**
-   This program tests the Easter class.
- */
-public class EasterTester
+public class Eastertester
 {
    public static void main(String[] args)
    {
-      Easter myEaster = new Easter(2001);
+      easter myEaster = new easter(2001);
 
       System.out.println("Month: " + myEaster.getEasterSundayMonth());
       System.out.println("Expected: 4");
@@ -13,4 +10,3 @@ public class EasterTester
       System.out.println("Expected: 15");      
    }
 }
-
